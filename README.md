@@ -4,8 +4,6 @@
 
 A data analytics portfolio project that investigates patterns in labelled network flows: common attack categories, protocols, services, traffic rates, and data quality. It converts a cybersecurity benchmark dataset into summary tables, charts, and an interactive dashboard to support exploratory security analysis.
 
-> **Scope:** This is a **descriptive analytics project**, not a real-time intrusion detection system (IDS) or a trained attack classifier. A network flow labelled as an attack is **not** the same as a confirmed security incident.
-
 ## 📊 Dashboard preview
 
 The following images were generated using **synthetic demonstration data**, not actual UNSW-NB15 records.
@@ -109,52 +107,7 @@ The output tables and charts will then be based on the CSV you provided. The das
 
 **Dataset citation:** Moustafa, N., & Slay, J. (2015). *UNSW-NB15: a comprehensive data set for network intrusion detection systems*. MilCIS 2015. Refer to the [official source](https://research.unsw.edu.au/projects/unsw-nb15-dataset) for dataset access and citation details.
 
-## 📈 Analysis outputs
-
-Running the pipeline writes the following files:
-
-| Output | Description |
-| --- | --- |
-| `outputs/cleaned_flows.csv` | Validated flow records and derived fields |
-| `outputs/kpis.csv` | Overall flow counts, attack-labelled share, and categories |
-| `outputs/attack_categories.csv` | Attack categories and counts |
-| `outputs/protocol_risk.csv` | Protocol-level flow and label summaries |
-| `outputs/service_risk.csv` | Service-level flow and label summaries |
-| `outputs/traffic_profile.csv` | Duration, rate, and traffic-volume summaries |
-| `outputs/data_quality.csv` | Data-cleaning and quality checks |
-| `reports/attack_mix.png` | Attack-category chart |
-| `reports/protocol_exposure.png` | Protocol comparison chart |
-
-Additional outputs include connection-state summaries and SQL queries in `sql/analysis.sql`.
-
-## 🔍 Questions this project helps explore
-
-- Which attack categories appear most frequently in the selected dataset?
-- How does the proportion of attack-labelled flows vary by protocol?
-- Which services account for the largest flow volumes?
-- How do traffic rates and transferred bytes differ between labelled normal and attack traffic?
-- What data-quality limitations should be considered before interpreting results?
-
-## ⚠️ Limitations and responsible interpretation
-
-- **Demo data is synthetic.** Demo graphs and numbers are not empirical findings from a production network.
-- **The real dataset is a benchmark**, not a live security operations centre feed.
-- **Flow counts are not incident counts.** Multiple flows may relate to a single event, and labels do not independently confirm an incident.
-- **Attack-labelled percentages depend on dataset sampling and class balance.** They must not be interpreted as the probability that an arbitrary real-world connection is malicious.
-- **Official training/testing splits do not provide timestamps** suitable for claims about trends over time.
-- **This app does not inspect packets, attribute attackers, or block threats.**
-
 ## 💡 Skills demonstrated
 
 Data cleaning · Exploratory data analysis · Cybersecurity fundamentals · Network-flow interpretation · Python · SQL · Interactive dashboards · Reproducible analysis · Data-quality validation · Technical documentation
 
-## 🔭 Future improvements
-
-- Add an exploratory notebook with deeper statistical analysis.
-- Compare results between the official training and testing datasets.
-- Add configurable report exports and enhanced dashboard filters.
-- Introduce separate, properly validated intrusion-detection modelling as a future project phase.
-
----
-
-**Portfolio project:** Built to demonstrate practical cybersecurity data analysis and clear communication of security-related findings.
