@@ -1,0 +1,4 @@
+proto,total_flows,attack_labelled_flows,attack_share_pct
+tcp,8485,3114,36.7
+udp,2972,1152,38.76
+icmp,543,204,37.57

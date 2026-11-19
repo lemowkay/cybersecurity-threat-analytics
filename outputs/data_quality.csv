@@ -1,0 +1,2 @@
+raw_flows,valid_binary_label_flows,invalid_labels_removed,missing_rates,missing_traffic_bytes,unique_attack_categories
+12000,12000,0,0,0,9

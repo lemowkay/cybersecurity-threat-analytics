@@ -1,0 +1,10 @@
+attack_cat,attack_flows
+Exploits,1013
+Fuzzers,741
+DoS,722
+Generic,584
+Reconnaissance,561
+Analysis,352
+Backdoor,249
+Shellcode,209
+Worms,39
